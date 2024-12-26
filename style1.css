@@ -1,0 +1,306 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.navbar {
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #3498db;
+    transform: translateY(-3px);
+}
+
+.hero {
+    background-color: #64b5f6;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin: 20px 0;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero .btn {
+    background-color: #ffffff;
+    color: #3498db;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: 2px solid #3498db;
+    transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #3498db;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+#courses {
+    padding: 80px 0;
+    background-color: #f1f1f1;
+}
+
+#courses h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.course-card-container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.course-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.course-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.course-card:hover .course-card-inner {
+    transform: rotateY(180deg);
+}
+
+.course-card-front, .course-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.course-card-front {
+    background-color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.course-card-back {
+    background-color: #3498db;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Scroll Animations for Sections */
+[data-aos="fade-up"] {
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.125rem;
+    }
+
+    .course-card-container {
+        margin-bottom: 20px;
+    }
+
+    .course-card {
+        height: 100%;
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Button Hover Effect */
+.btn-light {
+    border: 2px solid #3498db;
+    background-color: #ffffff;
+    color: #3498db;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-light:hover {
+    background-color: #3498db;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Enhancing Hover Effects on Cards */
+.course-card .card-body {
+    padding: 20px;
+}
+
+.course-card .card-body h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.course-card .card-body p {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.course-card .card-body .btn {
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+}
+
+.course-card .card-body .btn:hover {
+    background-color: #2a80b9;
+}
+
+/* Hover Effects for Navbar */
+.navbar-nav .nav-item {
+    margin: 0 15px;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #3498db;
+    transform: translateY(-3px);
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Animating Sections on Scroll */
+section {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

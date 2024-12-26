@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">E-Learn</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero text-center text-white py-5" style="background-color: #64b5f6;">
+        <div class="container">
+            <h1>Welcome to E-Learn</h1>
+            <p>Master new skills with our online courses. Learn from experts.</p>
+            <a href="courses.html" class="btn btn-light">Browse Courses</a>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for courses..." id="courseSearch">
+                    <button class="btn btn-teal" type="button">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="text-center">Featured Courses</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card course-card">
+                    <img src="download.jpeg" class="card-img-top" alt="Course 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Development</h5>
+                        <p class="card-text">Learn HTML, CSS, JavaScript, and build your own websites.</p>
+                        <p class="card-text"><strong>Instructor:</strong> John Doe</p>
+                        <p class="card-text"><strong>Duration:</strong> 6 weeks</p>
+                        <p class="card-text"><strong>Difficulty:</strong> Beginner</p>
+                        <div class="course-rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span>
+                        </div>
+                        <button class="btn btn-teal" data-bs-toggle="modal" data-bs-target="#courseModal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card course-card">
+                    <img src="download (1).jpeg" class="card-img-top" alt="Course 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Science</h5>
+                        <p class="card-text">Master Python, data analysis, and machine learning.</p>
+                        <p class="card-text"><strong>Instructor:</strong> Jane Smith</p>
+                        <p class="card-text"><strong>Duration:</strong> 8 weeks</p>
+                        <p class="card-text"><strong>Difficulty:</strong> Intermediate</p>
+                        <div class="course-rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span>
+                            <span class="star">&#9734;</span>
+                        </div>
+                        <button class="btn btn-teal" data-bs-toggle="modal" data-bs-target="#courseModal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card course-card">
+                    <img src="download (2).jpeg" class="card-img-top" alt="Course 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Digital Marketing</h5>
+                        <p class="card-text">Learn SEO, social media marketing, and more.</p>
+                        <p class="card-text"><strong>Instructor:</strong> Emily Johnson</p>
+                        <p class="card-text"><strong>Duration:</strong> 4 weeks</p>
+                        <p class="card-text"><strong>Difficulty:</strong> Beginner</p>
+                        <div class="course-rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9734;</span>
+                        </div>
+                        <button class="btn btn-teal" data-bs-toggle="modal" data-bs-target="#courseModal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="text-center">What Our Students Say</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p>"The web development course helped me land my first job as a developer! Highly recommended."</p>
+                    <p><strong>- Sarah L.</strong></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p>"The data science course was challenging but rewarding. I learned so much!"</p>
+                    <p><strong>- Mike B.</strong></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p>"Digital marketing was so easy to understand. I was able to apply what I learned right away."</p>
+                    <p><strong>- Anna W.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5 text-center">
+        <h2>Stay Updated</h2>
+        <p>Sign up for our newsletter to get the latest updates on courses and offers!</p>
+        <div class="input-group w-50 mx-auto">
+            <input type="email" class="form-control" placeholder="Enter your email" id="newsletterEmail">
+            <button class="btn btn-teal" type="button">Subscribe</button>
+        </div>
+    </section>
+
+    <footer class="bg-teal text-white text-center py-4">
+        <p>&copy; 2024 E-Learn. All Rights Reserved.</p>
+        <div>
+            <a href="#" class="text-white mx-2">Facebook</a>
+            <a href="#" class="text-white mx-2">Twitter</a>
+            <a href="#" class="text-white mx-2">Instagram</a>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="courseModalLabel">Course Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This is a detailed description of the course. You can provide information here like prerequisites, what students will learn, and course structure.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-teal">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
